@@ -20,7 +20,7 @@ public class BD {
     private Collection<Venda> listaVendas = new ArrayList();
     private Estoque estoque;
     
-    BD(Estoque estoque){
+    public BD(Estoque estoque){
         this.estoque = estoque;
     }
     
