@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 public class Produto {
 
-    protected static int codProd = 0;
+    public static int codProd = 0;
     protected float valorProd;
     private String nome;
     private int tipo;

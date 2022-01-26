@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -8,6 +9,7 @@ import Supermercado.Arquivo;
 import Supermercado.BD;
 import Supermercado.Estoque;
 import Supermercado.Funcionario;
+import Supermercado.Produto;
 
 public class BDTest {
 	private static BD bd;
@@ -21,6 +23,7 @@ public class BDTest {
         arquivo.getFuncionarios(bd);
         
 	}
+	
 	@Test
 	public void loginFuncionarioTest() {
 		
