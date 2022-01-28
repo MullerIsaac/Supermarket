@@ -42,5 +42,17 @@ public class BDTest {
 		assertNotEquals(null, f);
         
 	}
+	
+	@Test
+	public void setFuncionarioTest() {
+		
+		bd.cadastrarFuncionario("Teste", "isaacteste", "123456", 1);
+		bd.setFuncionarios();
+		Arquivo arq = new Arquivo();
+		arq.getFuncionarios(bd);
+		Funcionario f = bd.getFuncionario("isaacteste");
+        
+		assertNotEquals(null, f);
+	}
 
 }

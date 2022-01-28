@@ -55,5 +55,6 @@ public class EstoqueTest {
 		float quant = estoqueLocal2.quantidadeEstoque(p);
 		assertEquals(10f, quant, 0f);
 	}
+	
 
 }
