@@ -25,7 +25,7 @@ public class ControleCalcularPeso implements ActionListener{
         String pesoTotal = balanca.calcularPeso(peso);
         quantidade.setText(pesoTotal);
         frame.dispose();
-        JOptionPane.showMessageDialog(null, "O Peso Ã©: " +pesoTotal+"Kg");
+        JOptionPane.showMessageDialog(null, "O Peso é: " +pesoTotal+"Kg");
     }
     
 }

@@ -21,7 +21,7 @@ public class Estoque {
     public Produto buscarProduto(Integer codProd) {
         return identificador.get(codProd);
     }
-
+    
 
     public void gerarRelatorioEstoque() {
         FileWriter estoqueFinalDia;
@@ -92,6 +92,21 @@ public class Estoque {
         }
         prateleiras.put(produto, quant);
         return true;
+    }
+    
+    public void setEstoque (){
+        FileWriter arquivo;
+        try {
+            arquivo = new FileWriter(new File("ProdutosTest.txt"));
+            PrintWriter escreverArquivo = new PrintWriter(arquivo);
+            Set<Map.Entry<Produto, Float>> entrySet = this.prateleiras.entrySet();
+            for(Map.Entry<Produto, Float> entrada : entrySet){
+                escreverArquivo.write(entrada.getKey().getNome() + "\n" + entrada.getKey().getValorProd()+"f" + "\n" +  entrada.getValue() + "\n" + entrada.getKey().getTipo() + "\n");
+            }
+            arquivo.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }

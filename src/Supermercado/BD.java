@@ -74,6 +74,7 @@ public class BD {
             e.printStackTrace();
         }
     }
+    
 
     public void gerarRelatorioVendas() {
         FileWriter relatorio;

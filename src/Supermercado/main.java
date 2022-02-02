@@ -10,7 +10,7 @@ public class main {
         arquivo.getProdutos(estoqueLocal);
         arquivo.getFuncionarios(bd);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 1; i++) {
             threads[i] = new Threads(bd, estoqueLocal);
             threads[i].run();
         }
