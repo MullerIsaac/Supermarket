@@ -37,7 +37,11 @@ public class ControleAdicionar implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Quantidade inválida");
             } else if (produto == null) {
                 //Tratamento efetuado em controleVisualizar
-            } else {
+            }else if(estoque.quantidadeEstoque(produto)< Float.parseFloat(quantidade.getText()) ){
+            	JOptionPane.showMessageDialog(null, "Demanda maior que o estoque! Tente Novamente");
+            	quantidade.setText("");
+            }
+            else {
                 Item item;
                 if (produto.getTipo() == 0) {
                     item = new Item(produto, Float.parseFloat(quantidade.getText()));
