@@ -51,6 +51,7 @@ public class ControleAdicionar implements ActionListener {
                 itens.addElement(item);
                 caixa.getVenda().adicionarProdutoVenda(item);
                 estoque.retirarPrateleira(produto, Float.parseFloat(quantidade.getText()));
+                estoque.setEstoque();
                 DecimalFormat df = new DecimalFormat("0.00");
                 valorTotal.setText(String.valueOf(df.format(caixa.getVenda().getValorTotal())));
             }

@@ -9,6 +9,7 @@ import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
@@ -16,7 +17,7 @@ import java.util.Set;
 public class Estoque {
 
     private Map<Integer, Produto> identificador = new HashMap();
-    private Map<Produto, Float> prateleiras = new HashMap();
+    private Map<Produto, Float> prateleiras = new LinkedHashMap();
 
     public Produto buscarProduto(Integer codProd) {
         return identificador.get(codProd);
@@ -97,7 +98,7 @@ public class Estoque {
     public void setEstoque (){
         FileWriter arquivo;
         try {
-            arquivo = new FileWriter(new File("ProdutosTest.txt"));
+            arquivo = new FileWriter(new File("Produtos.txt"));
             PrintWriter escreverArquivo = new PrintWriter(arquivo);
             Set<Map.Entry<Produto, Float>> entrySet = this.prateleiras.entrySet();
             for(Map.Entry<Produto, Float> entrada : entrySet){

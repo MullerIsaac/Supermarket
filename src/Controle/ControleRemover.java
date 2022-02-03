@@ -33,7 +33,8 @@ public class ControleRemover implements ActionListener {
             Item itemSelecionado = listaItens.getSelectedValue();
             caixa.getVenda().removerProdutoVenda(itemSelecionado);
             itens.removeElement(itemSelecionado);
-            estoque.inserirPrateleira(itemSelecionado.getProduto(), itemSelecionado.getValorTotal());
+            estoque.inserirPrateleira(itemSelecionado.getProduto(), itemSelecionado.getQuantidade());
+            estoque.setEstoque();
             DecimalFormat df = new DecimalFormat("0.00");
             valorTotal.setText(String.valueOf(df.format(caixa.getVenda().getValorTotal())));
         } catch (NullPointerException ex){
